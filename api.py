@@ -50,6 +50,25 @@ def get_content():
         logger.error(f"Exception occurred: {str(e)}", exc_info=True)
         return jsonify({"error":f"{e}"})
 
+@app.route('/api/put-content', methods=['PUT'])
+def put_content():
+    try:
+        data = request.get_json()
+        print(data)
+        conn = mysql.connector.connect(
+            host='localhost',
+            user=mariadb_user,
+            password=mariadb_pw,
+            database='kick_preview'
+        )n
+        # cursor = conn.cursor()
+        # conn.start_transaction()
+        # conn.execute(f"INSERT INTO tracks (title, audio_content_uri, image_content_uri, link) VALUES ({}, {}, {}, {}) ")
+        # conn.commit()
+        return jsonify({"message": "Data inserted successfully"}), 200
+    except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}", exc_info=True)
+        return jsonify({"error":f"{e}"})
 
 @app.errorhandler(404)
 def page_not_found(error):
