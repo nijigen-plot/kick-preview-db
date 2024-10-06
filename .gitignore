@@ -17,3 +17,6 @@ wheels/
 
 # contents
 contents/*
+
+# other
+*.txt
