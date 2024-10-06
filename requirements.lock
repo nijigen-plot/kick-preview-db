@@ -17,10 +17,16 @@ boto3==1.35.24
 botocore==1.35.24
     # via boto3
     # via s3transfer
+certifi==2024.8.30
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via flask
 flask==3.0.3
     # via work
+idna==3.10
+    # via requests
 itsdangerous==2.2.0
     # via flask
 jinja2==3.1.4
@@ -33,9 +39,13 @@ markupsafe==2.1.5
     # via werkzeug
 mysql-connector-python==9.0.0
     # via work
+pillow==10.4.0
+    # via work
 python-dateutil==2.9.0.post0
     # via botocore
 python-dotenv==1.0.1
+    # via work
+requests==2.32.3
     # via work
 s3transfer==0.10.2
     # via boto3
@@ -43,5 +53,6 @@ six==1.16.0
     # via python-dateutil
 urllib3==2.2.3
     # via botocore
+    # via requests
 werkzeug==3.0.4
     # via flask

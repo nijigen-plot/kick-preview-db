@@ -10,6 +10,8 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "boto3>=1.35.24",
     "flask>=3.0.3",
+    "pillow>=10.4.0",
+    "requests>=2.32.3",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
