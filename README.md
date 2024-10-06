@@ -13,4 +13,4 @@
 
 1. install [rye](https://rye.astral.sh/)
 2. run `$ rye sync`
-3. run `rye run python read_track_table.py`
+3. run `rye run python api.py`
