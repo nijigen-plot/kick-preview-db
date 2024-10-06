@@ -27,7 +27,7 @@ def get_content():
             database='kick_preview'
         )
         cursor = conn.cursor()
-        cursor.execute("SELECT title, audio_content_uri, image_content_uri FROM tracks ORDER BY RAND() LIMIT 1;")
+        cursor.execute("SELECT title, audio_content_uri, image_content_uri, link FROM tracks ORDER BY RAND() LIMIT 1;")
         result = cursor.fetchone()
         cursor.close()
         conn.close()
@@ -35,10 +35,12 @@ def get_content():
             title = result[0]
             audio_uri = result[1]
             image_uri = result[2]
+            link = result[3]
             res = jsonify({
                     "title" : title,
                     "audio_uri" : audio_uri,
-                    "image_uri" : image_uri
+                    "image_uri" : image_uri,
+                    "link": link
                 })
             logger.info(res)
             return res
