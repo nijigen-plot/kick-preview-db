@@ -17,6 +17,10 @@ wheels/
 
 # contents
 contents/*
+*.csv
 
 # other
 *.txt
+
+# nohup
+*.out
