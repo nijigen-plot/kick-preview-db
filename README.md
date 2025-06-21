@@ -14,3 +14,16 @@
 1. install [rye](https://rye.astral.sh/)
 2. run `$ rye sync`
 3. run `rye run python api.py`
+
+## Contents copy
+
+1. copy audio contents from local pc `$ scp -r /mnt/h/kick-preview/audio/* raspberrypi:/home/quark/Work/my-kick-preview-db/contents/audio/`
+1. copy image contents from local pc `$ scp -r /mnt/h/kick-preview/image/* raspberrypi:/home/quark/Work/my-kick-preview-db/contents/image/`
+
+### DBに新しいデータを挿入
+
+- 一括送信してくれるやつ
+
+1. import.csvに上記コマンドの為のデータ入れる
+2. `rye run python batch_uploader.py`でimport.csvのデータを一括挿入
+
